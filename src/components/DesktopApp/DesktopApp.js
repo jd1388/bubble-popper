@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import Cookies from 'js-cookie';
 
-import SoapSudCounter from './components/SoapSudCounter/SoapSudCounter';
-import PopRate from './components/PopRate/PopRate';
-import SoapBubble from './components/SoapBubble/SoapBubble';
-import BubbleFactory from './components/BubbleFactory/BubbleFactory';
+import SoapSudCounter from '../SoapSudCounter/SoapSudCounter';
+import PopRate from '../PopRate/PopRate';
+import SoapBubble from '../SoapBubble/SoapBubble';
+import BubbleFactory from '../BubbleFactory/BubbleFactory';
 
-import Styles from './App.style';
+import Styles from './Styles';
 
-class App extends Component {
+class DesktopApp extends Component {
   constructor(props) {
     super(props);
 
@@ -180,4 +180,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default DesktopApp;
