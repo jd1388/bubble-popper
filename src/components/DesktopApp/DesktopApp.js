@@ -101,7 +101,7 @@ class DesktopApp extends Component {
         <div style={Styles.bubbleContainer}>
           <SoapSudCounter soapSuds={soapSuds}/>
           <PopRate rate={popRate} />
-          <SoapBubble onClick={this.popBubble} />
+          <SoapBubble onClick={this.popBubble} diameter={25}/>
         </div>
         <div style={Styles.menu}>
           <BubbleFactory

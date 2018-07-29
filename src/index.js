@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import DesktopApp from './components/DesktopApp/DesktopApp';
+import MobileApp from './components/MobileApp/MobileApp';
 import { unregister } from './registerServiceWorker';
 
 let isMobile;
@@ -11,7 +12,7 @@ if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elain
 }
 
 if (isMobile) {
-
+    ReactDOM.render(<MobileApp />, document.getElementById('root'));
 } else {
     ReactDOM.render(<DesktopApp />, document.getElementById('root'));
 }
