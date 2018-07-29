@@ -3,9 +3,14 @@
   "name": "Bubble Popper",
   "icons": [
     {
-      "src": "bubble.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
-      "type": "image/svg+xml"
+      "src": "bubble-192.png",
+      "sizes": "192x192 64x64 32x32 24x24 16x16",
+      "type": "image/png"
+    },
+    {
+      "src": "bubble-180.png",
+      "sizes": "180x180 152x152",
+      "type": "image/png"
     }
   ],
   "start_url": "./index.html",
