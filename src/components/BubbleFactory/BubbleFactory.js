@@ -57,7 +57,7 @@ class BubbleFactory extends Component {
     }
 
     render() {
-        const { title, count, rate } = this.props;
+        const { title, count, rate, mobile } = this.props;
 
         const currentCost = this.getCurrentCost();
 
@@ -74,12 +74,28 @@ class BubbleFactory extends Component {
                 }}
             >
                 <div style={Styles.bubbleFactoryInfo}>
-                    <div style={Styles.bubbleFactoryTitle}>{title}</div>
-                    <div style={Styles.bubbleFactoryCount}>{format(count)}</div>
+                    <div
+                        style={mobile ? Styles.mobileBubbleFactoryTitle : Styles.bubbleFactoryTitle}
+                    >
+                        {title}
+                    </div>
+                    <div
+                        style={mobile ? Styles.mobileBubbleFactoryCount : Styles.bubbleFactoryCount}
+                    >
+                        {format(count)}
+                    </div>
                 </div>
                 <div style={Styles.bubbleFactoryInfo}>
-                    <div style={Styles.bubbleFactoryRate}>+{format(rate)}</div>
-                    <div style={Styles.bubbleFactoryCost}>{format(currentCost)}</div>
+                    <div
+                        style={mobile ? Styles.mobileBubbleFactoryRate : Styles.bubbleFactoryRate}
+                    >
+                        +{format(rate)}
+                    </div>
+                    <div
+                        style={mobile ? Styles.mobileBubbleFactoryCost : Styles.bubbleFactoryCost}
+                    >
+                        {format(currentCost)} Sud{currentCost === 1 ? '' : 's'}
+                    </div>
                 </div>
             </div>
         );

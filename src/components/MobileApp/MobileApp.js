@@ -5,6 +5,7 @@ import MenuButton from '../MenuButton/MenuButton';
 import SoapSudCounter from '../SoapSudCounter/SoapSudCounter';
 import PopRate from '../PopRate/PopRate';
 import SoapBubble from '../SoapBubble/SoapBubble';
+import FactoryMenu from '../FactoryMenu/FactoryMenu';
 
 import Styles from './Styles';
 
@@ -103,7 +104,7 @@ class MobileApp extends Component {
   }
 
   render() {
-    const { soapSuds, popRate, menuDisplayed } = this.state;
+    const { soapSuds, popRate, menuDisplayed, factoriesOwned } = this.state;
 
     return (
       <div style={Styles.appContainer}>
@@ -116,6 +117,14 @@ class MobileApp extends Component {
           <PopRate rate={popRate} />
           <SoapBubble onClick={this.popBubble} diameter={75} />
         </div>
+        <FactoryMenu
+          displayed={menuDisplayed}
+          soapSuds={soapSuds}
+          factoriesOwned={factoriesOwned}
+          paySoapSuds={this.paySoapSuds}
+          incrementFactoryCount={this.incrementFactoryCount}
+          incrementPopRate={this.incrementPopRate}
+        />
       </div>
     );
   }
