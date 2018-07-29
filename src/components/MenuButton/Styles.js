@@ -8,5 +8,6 @@ export default {
         padding: '12px',
         borderRadius: '6px',
         border: 'solid 1px blue',
+        cursor: 'pointer',
     },
 };

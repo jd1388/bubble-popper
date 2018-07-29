@@ -4,7 +4,8 @@ export default {
         height: '10vh',
         border: 'solid 1px black',
         flexDirection: 'column',
-        padding: '12px'
+        padding: '12px',
+        cursor: 'pointer',
     },
     bubbleFactoryInfo: {
         display: 'flex',
