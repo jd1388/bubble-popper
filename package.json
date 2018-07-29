@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://jd1388.github.io/bubble-popper",
   "dependencies": {
+    "js-cookie": "^2.2.0",
     "numeral": "^2.0.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",

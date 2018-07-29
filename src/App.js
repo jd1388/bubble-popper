@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Cookies from 'js-cookie';
 
 import SoapSudCounter from './components/SoapSudCounter/SoapSudCounter';
 import PopRate from './components/PopRate/PopRate';
@@ -11,12 +12,29 @@ class App extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      bubblesPopped: 0,
-      soapSuds: 0,
-      factoriesOwned: {},
-      popRate: 0,
-    };
+    const previousSave = Cookies.get('saveData');
+
+    if (previousSave) {
+      const { bubblesPopped, soapSuds, factoriesOwned, popRate } = JSON.parse(previousSave);
+
+      this.state = {
+        bubblesPopped,
+        soapSuds,
+        factoriesOwned,
+        popRate,
+      }
+    } else {
+        this.state = {
+          bubblesPopped: 0,
+          soapSuds: 0,
+          factoriesOwned: {},
+          popRate: 0,
+        };
+    }
+
+    window.addEventListener('unload', () => {
+      Cookies.set('saveData', JSON.stringify(this.state));
+    });
 
     this.popBubble = this.popBubble.bind(this);
     this.incrementFactoryCount = this.incrementFactoryCount.bind(this);
