@@ -123,7 +123,17 @@ class App extends Component {
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('littlekid')}
             incrementPopRate={this.incrementPopRate}
-            />
+          />
+          <BubbleFactory
+            title="Pet Dog"
+            soapSuds={soapSuds}
+            rate={8}
+            initialCost={40}
+            count={factoriesOwned.petdog || 0}
+            paySoapSuds={this.paySoapSuds}
+            incrementFactoryCount={() => this.incrementFactoryCount('petdog')}
+            incrementPopRate={this.incrementPopRate}
+          />
           <BubbleFactory
             title="Grandpa"
             soapSuds={soapSuds}
@@ -132,6 +142,36 @@ class App extends Component {
             count={factoriesOwned.grandpa || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('grandpa')}
+            incrementPopRate={this.incrementPopRate}
+          />
+          <BubbleFactory
+            title="Mom"
+            soapSuds={soapSuds}
+            rate={20}
+            initialCost={85}
+            count={factoriesOwned.mom || 0}
+            paySoapSuds={this.paySoapSuds}
+            incrementFactoryCount={() => this.incrementFactoryCount('mom')}
+            incrementPopRate={this.incrementPopRate}
+          />
+          <BubbleFactory
+            title="Bubble Store"
+            soapSuds={soapSuds}
+            rate={35}
+            initialCost={125}
+            count={factoriesOwned.bubblestore || 0}
+            paySoapSuds={this.paySoapSuds}
+            incrementFactoryCount={() => this.incrementFactoryCount('bubblestore')}
+            incrementPopRate={this.incrementPopRate}
+          />
+          <BubbleFactory
+            title="Bubble Factory"
+            soapSuds={soapSuds}
+            rate={65}
+            initialCost={180}
+            count={factoriesOwned.bubblefactory || 0}
+            paySoapSuds={this.paySoapSuds}
+            incrementFactoryCount={() => this.incrementFactoryCount('bubblefactory')}
             incrementPopRate={this.incrementPopRate}
           />
         </div>
