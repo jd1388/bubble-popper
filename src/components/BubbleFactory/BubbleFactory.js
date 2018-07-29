@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+import numeral from 'numeral';
 
 import Styles from './Styles';
+
+const format = (valueToFormat) => numeral(valueToFormat).format('0.[00a]');
 
 class BubbleFactory extends Component {
     constructor(props) {
@@ -72,11 +75,11 @@ class BubbleFactory extends Component {
             >
                 <div style={Styles.bubbleFactoryInfo}>
                     <div style={Styles.bubbleFactoryTitle}>{title}</div>
-                    <div style={Styles.bubbleFactoryCount}>{count}</div>
+                    <div style={Styles.bubbleFactoryCount}>{format(count)}</div>
                 </div>
                 <div style={Styles.bubbleFactoryInfo}>
                     <div style={Styles.bubbleFactoryRate}>+{rate}</div>
-                    <div style={Styles.bubbleFactoryCost}>{currentCost}</div>
+                    <div style={Styles.bubbleFactoryCost}>{format(currentCost)}</div>
                 </div>
             </div>
         );
