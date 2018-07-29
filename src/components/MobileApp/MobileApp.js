@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Cookies from 'js-cookie';
 
+import MenuButton from '../MenuButton/MenuButton';
 import SoapSudCounter from '../SoapSudCounter/SoapSudCounter';
 import PopRate from '../PopRate/PopRate';
 import SoapBubble from '../SoapBubble/SoapBubble';
@@ -97,6 +98,7 @@ class MobileApp extends Component {
 
     return (
       <div style={Styles.appContainer}>
+        <MenuButton />
         <div style={Styles.bubbleContainer}>
           <SoapSudCounter soapSuds={soapSuds}/>
           <PopRate rate={popRate} />
