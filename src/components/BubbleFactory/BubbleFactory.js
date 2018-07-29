@@ -34,7 +34,7 @@ class BubbleFactory extends Component {
     getCurrentCost() {
         const { initialCost, count } = this.props;
 
-        const incrementRate = Math.pow(count, 1.2);
+        const incrementRate = Math.pow(count, 1.2) || 1;
 
         return Math.round(initialCost * incrementRate);
     }
