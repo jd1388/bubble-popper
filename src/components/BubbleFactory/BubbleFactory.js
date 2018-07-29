@@ -16,7 +16,7 @@ class BubbleFactory extends Component {
     }
 
     purchaseFactory() {
-        const { paySoapSuds, incrementFactoryCount, incrementPopRate } = this.props;
+        const { paySoapSuds, incrementFactoryCount, incrementPopRate, rate } = this.props;
 
         const currentCost = this.getCurrentCost();
 
@@ -24,7 +24,7 @@ class BubbleFactory extends Component {
 
         if (paidSuccessfully) {
             incrementFactoryCount();
-            incrementPopRate();
+            incrementPopRate(rate);
         }
     }
 
@@ -54,7 +54,7 @@ class BubbleFactory extends Component {
     }
 
     render() {
-        const { title, count } = this.props;
+        const { title, count, rate } = this.props;
 
         const currentCost = this.getCurrentCost();
 
@@ -74,7 +74,10 @@ class BubbleFactory extends Component {
                     <div style={Styles.bubbleFactoryTitle}>{title}</div>
                     <div style={Styles.bubbleFactoryCount}>{count}</div>
                 </div>
-                <div style={Styles.bubbleFactoryCost}>{currentCost}</div>
+                <div style={Styles.bubbleFactoryInfo}>
+                    <div style={Styles.bubbleFactoryRate}>+{rate}</div>
+                    <div style={Styles.bubbleFactoryCost}>{currentCost}</div>
+                </div>
             </div>
         );
     }

@@ -89,29 +89,32 @@ class App extends Component {
           <BubbleFactory
             title="Extra Finger"
             soapSuds={soapSuds}
+            rate={1}
             initialCost={10}
             count={factoriesOwned.extrafinger || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('extrafinger')}
-            incrementPopRate={() => this.incrementPopRate(1)}
+            incrementPopRate={this.incrementPopRate}
           />
           <BubbleFactory
             title="Little Kid"
             soapSuds={soapSuds}
+            rate={5}
             initialCost={25}
             count={factoriesOwned.littlekid || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('littlekid')}
-            incrementPopRate={() => this.incrementPopRate(5)}
+            incrementPopRate={this.incrementPopRate}
             />
           <BubbleFactory
             title="Grandpa"
             soapSuds={soapSuds}
+            rate={10}
             initialCost={50}
             count={factoriesOwned.grandpa || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('grandpa')}
-            incrementPopRate={() => this.incrementPopRate(10)}
+            incrementPopRate={this.incrementPopRate}
           />
         </div>
       </div>

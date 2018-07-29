@@ -25,6 +25,13 @@ export default {
         alignItems: 'flex-start',
         fontSize: '24pt',
     },
+    bubbleFactoryRate: {
+        display: 'flex',
+        flex: 6,
+        justifyContent: 'flex-start',
+        alignItems: 'flex-end',
+        fontSize: '20pt',
+    },
     bubbleFactoryCost: {
         display: 'flex',
         justifyContent: 'flex-end',
