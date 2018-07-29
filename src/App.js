@@ -118,7 +118,7 @@ class App extends Component {
             title="Little Kid"
             soapSuds={soapSuds}
             rate={5}
-            initialCost={25}
+            initialCost={100}
             count={factoriesOwned.littlekid || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('littlekid')}
@@ -127,8 +127,8 @@ class App extends Component {
           <BubbleFactory
             title="Pet Dog"
             soapSuds={soapSuds}
-            rate={8}
-            initialCost={40}
+            rate={20}
+            initialCost={850}
             count={factoriesOwned.petdog || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('petdog')}
@@ -137,8 +137,8 @@ class App extends Component {
           <BubbleFactory
             title="Grandpa"
             soapSuds={soapSuds}
-            rate={10}
-            initialCost={50}
+            rate={85}
+            initialCost={2100}
             count={factoriesOwned.grandpa || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('grandpa')}
@@ -147,8 +147,8 @@ class App extends Component {
           <BubbleFactory
             title="Mom"
             soapSuds={soapSuds}
-            rate={20}
-            initialCost={85}
+            rate={210}
+            initialCost={9200}
             count={factoriesOwned.mom || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('mom')}
@@ -157,8 +157,8 @@ class App extends Component {
           <BubbleFactory
             title="Bubble Store"
             soapSuds={soapSuds}
-            rate={35}
-            initialCost={125}
+            rate={735}
+            initialCost={33000}
             count={factoriesOwned.bubblestore || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('bubblestore')}
@@ -167,8 +167,8 @@ class App extends Component {
           <BubbleFactory
             title="Bubble Factory"
             soapSuds={soapSuds}
-            rate={65}
-            initialCost={180}
+            rate={1900}
+            initialCost={112000}
             count={factoriesOwned.bubblefactory || 0}
             paySoapSuds={this.paySoapSuds}
             incrementFactoryCount={() => this.incrementFactoryCount('bubblefactory')}

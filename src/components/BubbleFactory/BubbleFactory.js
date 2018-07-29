@@ -34,7 +34,7 @@ class BubbleFactory extends Component {
     getCurrentCost() {
         const { initialCost, count } = this.props;
 
-        const incrementRate = Math.pow(1.25, count);
+        const incrementRate = Math.sqrt(count + 1);
 
         return Math.round(initialCost * incrementRate);
     }
@@ -78,7 +78,7 @@ class BubbleFactory extends Component {
                     <div style={Styles.bubbleFactoryCount}>{format(count)}</div>
                 </div>
                 <div style={Styles.bubbleFactoryInfo}>
-                    <div style={Styles.bubbleFactoryRate}>+{rate}</div>
+                    <div style={Styles.bubbleFactoryRate}>+{format(rate)}</div>
                     <div style={Styles.bubbleFactoryCost}>{format(currentCost)}</div>
                 </div>
             </div>
