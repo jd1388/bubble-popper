@@ -22,6 +22,7 @@ class MobileApp extends Component {
         soapSuds,
         factoriesOwned,
         popRate,
+        menuDisplayed: false,
       }
     } else {
         this.state = {
@@ -29,6 +30,7 @@ class MobileApp extends Component {
           soapSuds: 0,
           factoriesOwned: {},
           popRate: 0,
+          menuDisplayed: false,
         };
     }
 
@@ -36,10 +38,17 @@ class MobileApp extends Component {
       Cookies.set('saveData', JSON.stringify(this.state));
     });
 
+    this.toggleMenu = this.toggleMenu.bind(this);
     this.popBubble = this.popBubble.bind(this);
     this.incrementFactoryCount = this.incrementFactoryCount.bind(this);
     this.incrementPopRate = this.incrementPopRate.bind(this);
     this.paySoapSuds = this.paySoapSuds.bind(this);
+  }
+
+  toggleMenu() {
+    const { menuDisplayed } = this.state;
+
+    this.setState({ menuDisplayed: !menuDisplayed })
   }
 
   popBubble() {
@@ -94,11 +103,14 @@ class MobileApp extends Component {
   }
 
   render() {
-    const { soapSuds, popRate } = this.state;
+    const { soapSuds, popRate, menuDisplayed } = this.state;
 
     return (
       <div style={Styles.appContainer}>
-        <MenuButton />
+        <MenuButton
+          onClick={this.toggleMenu}
+          text={menuDisplayed ? 'Close' : 'Upgrades'}
+        />
         <div style={Styles.bubbleContainer}>
           <SoapSudCounter soapSuds={soapSuds}/>
           <PopRate rate={popRate} />

@@ -13,9 +13,11 @@ class MenuButton extends Component {
 
     render() {
         const { pressed } = this.state;
+        const { text, onClick } = this.props;
 
         return (
             <div
+                onClick={onClick}
                 onMouseDown={() => this.setState({ pressed: true })}
                 onMouseUp={() => this.setState({ pressed: false })}
                 onTouchStart={() => this.setState({ pressed: true })}
@@ -25,7 +27,7 @@ class MenuButton extends Component {
                     backgroundColor: pressed ? '#79BAEC' : 'lightblue',
                 }}
             >
-                Upgrades
+                {text}
             </div>
         )
     }
