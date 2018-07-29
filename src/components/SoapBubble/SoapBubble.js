@@ -29,13 +29,7 @@ class SoapBubble extends Component {
                     borderRadius: `${diameter / 2}vw`,
                     boxShadow: pressed ? '0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23)' : '0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)'
                 }}
-            >
-                <img
-                    src="bubble.svg"
-                    alt=""
-                    style={Styles.bubble}
-                />
-            </div>
+            />
         );
     }
 }
